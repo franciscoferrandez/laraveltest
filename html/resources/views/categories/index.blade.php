@@ -26,7 +26,7 @@
                                     {{ $category->name }}
                                 </td>
                                 <td>
-                                    <a href="{{ route('books.edit', $category->id) }}" class="btn btn-warning btn-sm"><i class="fa-solid fa-edit"></i></a>
+                                    <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-warning btn-sm"><i class="fa-solid fa-edit"></i></a>
                                     <a href="javascript: document.getElementById('delete-{{$category->id}}').submit();" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
                                     <form id="delete-{{$category->id}}" action="{{ route('categories.delete', $category->id) }}" class="d-none" method="POST">
                                         @method('delete')
